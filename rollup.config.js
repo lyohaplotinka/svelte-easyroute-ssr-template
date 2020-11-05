@@ -3,7 +3,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-import alias from '@rollup/plugin-alias';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -37,14 +36,6 @@ const client = {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
-		alias({
-			entries: [
-				{
-					find: 'svelte-easyroute',
-					replacement: '/Users/alexeysolovjov/CODE/Github/easyroute-all/svelte-easyroute/lib'
-				}
-			]
-		}),
 		svelte({
 			dev: !production,
 			css: css => {
@@ -76,14 +67,6 @@ const server = {
 		exports: 'default'
 	},
 	plugins: [
-		alias({
-			entries: [
-				{
-					find: 'svelte-easyroute',
-					replacement: '/Users/alexeysolovjov/CODE/Github/easyroute-all/svelte-easyroute/lib'
-				}
-			]
-		}),
 		svelte({
 			dev: false,
 			css: css => {

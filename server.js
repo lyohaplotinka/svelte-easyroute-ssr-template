@@ -6,7 +6,7 @@ const fs = require('fs')
 const App = require('./public/ssr/bundle')
 
 // Create Svelte Easyroute renderer
-const renderer = require('/Users/alexeysolovjov/CODE/Github/easyroute-all/svelte-easyroute/lib/ssr')()
+const renderer = require('svelte-easyroute/lib/ssr')()
 
 // Read template file
 const template = fs.readFileSync(__dirname + '/public/index.html', 'utf8')
@@ -32,5 +32,5 @@ app.get('*', async (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log('Svelte SSR template is online!')
+    console.log('Svelte SSR template is online!', 'http://localhost:3000')
 })
