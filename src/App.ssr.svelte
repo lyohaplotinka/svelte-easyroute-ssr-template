@@ -1,12 +1,13 @@
 <script context="module">
 	import { EasyrouteProvider, RouterOutlet, RouterLink, registerRouterSSR } from 'svelte-easyroute'
-	import router from "./router/router";
+	import initRouter from "./router/router";
 
-	registerRouterSSR(router)
+	registerRouterSSR(initRouter)
 </script>
 
 <script>
 	export let name;
+	export let router;
 </script>
 
 <EasyrouteProvider {router}>

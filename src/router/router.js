@@ -19,9 +19,12 @@ const routes = [
     }
 ]
 
-const router = new Router({
-    mode: 'history',
-    routes
-})
+function initRouter(isSSR = false) {
+    const router = new Router({
+        mode: 'history',
+        routes
+    })
+    return router
+}
 
-export default router
+export default initRouter;
