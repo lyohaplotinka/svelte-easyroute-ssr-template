@@ -1,6 +1,8 @@
 <script>
 	import { EasyrouteProvider, RouterOutlet, RouterLink } from 'svelte-easyroute'
-	import router from "./router/router";
+	import initRouter from "./router/router";
+
+	const router = initRouter();
 
 	export let name;
 </script>

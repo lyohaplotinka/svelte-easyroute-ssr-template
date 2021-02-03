@@ -6,7 +6,7 @@ const fs = require('fs')
 const App = require('./public/ssr/bundle')
 
 // Create Svelte Easyroute renderer
-const renderer = require('svelte-easyroute/lib/ssr')()
+const renderer = require('./ssr/renderer');
 
 // Read template file
 const template = fs.readFileSync(__dirname + '/public/index.html', 'utf8')
