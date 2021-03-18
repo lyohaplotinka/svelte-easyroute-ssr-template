@@ -1,5 +1,6 @@
 <script context="module">
-	import { EasyrouteProvider, RouterOutlet, RouterLink, registerRouterSSR } from 'svelte-easyroute'
+	import { EasyrouteProvider, RouterOutlet, RouterLink } from 'svelte-easyroute'
+	import registerRouterSSR from 'svelte-easyroute/ssr/registerRouterSSR'
 	import router from "./router/router";
 
 	registerRouterSSR(router)
